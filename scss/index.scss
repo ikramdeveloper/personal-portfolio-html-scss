@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$white: #fff;
+$primaryColor: #e41c6f;
+$mainFont: "Jost", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: $mainFont;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+.section-heading {
+  font-size: 5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 8rem;
+  border-bottom: 0.3rem solid #333;
+  text-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+
+// header
+
+.header {
+  @extend .center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/bg.jpg") center no-repeat;
+  background-size: cover;
+  flex-direction: column;
+
+  &-heading {
+    font-size: 6rem;
+    font-weight: 700;
+    color: $white;
+    background-color: $primaryColor;
+    padding: 0 3rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    border-bottom: 0.3rem solid $white;
+    text-shadow: 0.2rem 0.2rem 1rem #555;
+    transform: skew(-10deg);
+  }
+
+  &-person-img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.7rem dotted $primaryColor;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    opacity: 0.9;
+  }
+
+  &-person-name {
+    font-size: 2rem;
+    color: $white;
+    background-color: $primaryColor;
+    margin: 5rem 0;
+    padding: 0.5rem 3rem;
+    letter-spacing: 0.3rem;
+    transform: skew(-10deg);
+  }
+
+  &-btn {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #333;
+    background-color: $white;
+    border: 0.3rem solid #333;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+}
+// end header
+
+// navbar
+.navbar {
+  @extend .center;
+  width: 100%;
+  height: 4rem;
+  background-color: $primaryColor;
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
+  z-index: 100;
+
+  &-link {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 3rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.2s;
+
+    &.active {
+      color: $white;
+
+      &::before {
+        width: 130%;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0.2rem;
+      background-color: $white;
+      position: absolute;
+      right: -15%;
+      bottom: -0.3rem;
+      transition: width 0.2s;
+    }
+
+    &:hover {
+      color: $white;
+
+      &::before {
+        width: 130%;
+      }
+    }
+  }
+}
+// end navbar
+
+// about section
+.about {
+  width: 100%;
+  height: 100%;
+  padding: 8rem 0 0;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .progress-bars-wrapper {
+    margin-bottom: 5rem;
+
+    .progress-bar {
+      width: 60rem;
+      height: 3rem;
+      background-color: #ccc;
+      margin: 1.5rem 0;
+      border-radius: 0.3rem;
+      box-shadow: 0.2rem 0.2rem 1rem #555;
+      position: relative;
+
+      &-text {
+        position: absolute;
+        left: 1rem;
+        font-size: 1.5rem;
+        color: $white;
+
+        span {
+          margin: 0 0.5rem;
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+      }
+
+      &-percent {
+        width: 0;
+        height: 100%;
+        background-color: $primaryColor;
+        border-radius: 0.3rem;
+        transition: width 0.5s 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .services {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .service {
+      text-align: center;
+
+      &:first-child,
+      &:last-child {
+        align-self: flex-start;
+      }
+
+      i {
+        font-size: 10rem;
+        color: #888;
+        margin-bottom: 2rem;
+        text-shadow: 0.1rem 0.1rem 0.5rem #555;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: $white;
+        background-color: #777;
+        width: 25rem;
+        letter-spacing: 0.3rem;
+        transform: skew(-10deg);
+        box-shadow: 0.2rem 0.2rem 0.5rem #555;
+      }
+    }
+  }
+}
+// end about section
+
+// projects section
+.projects {
+  width: 100%;
+  height: 100%;
+  padding: 8rem 0 8rem;
+  background-color: #eef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-wrapper {
+    @extend .center;
+    width: 90%;
+    flex-wrap: wrap;
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      background-color: $white;
+      box-shadow: 0.3rem 0.3rem 0.5rem #777;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.5s;
+
+      &:hover {
+        box-shadow: 1rem 1rem 1rem #777;
+        .project-content {
+          top: 5rem;
+          transition: top 0.3s 0.3s;
+        }
+
+        .project-link {
+          bottom: 5rem;
+          transition: bottom 0.3s 0.3s;
+        }
+
+        .project-img {
+          opacity: 0.2;
+        }
+      }
+
+      &-content {
+        text-align: center;
+        letter-spacing: 0.1rem;
+        position: absolute;
+        top: -10rem;
+        transition: top 0.3s;
+        z-index: 5;
+
+        .project-title {
+          font-size: 3rem;
+          font-weight: 700;
+          color: #333;
+        }
+
+        .project-technologies {
+          font-size: 1.8rem;
+          color: $primaryColor;
+        }
+      }
+
+      &-img {
+        width: 40rem;
+        transition: opacity 0.2s;
+      }
+
+      &-link {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #333;
+        letter-spacing: 0.1rem;
+        border: 0.3rem solid $primaryColor;
+        padding: 0 1rem;
+        background-color: $white;
+        position: absolute;
+        bottom: -5rem;
+        transition: bottom 0.3s;
+
+        &:hover {
+          background-color: $primaryColor;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+// end projects section
+
+// contact section
+.contact {
+  width: 100%;
+  height: 70vh;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &-heading {
+    color: $white;
+    box-shadow: none;
+    border-color: $white;
+    margin-bottom: 2rem;
+  }
+
+  &-form {
+    @extend .center;
+    flex-direction: column;
+    width: 50rem;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      background-color: #eef;
+      font-size: 1.5rem;
+      border: 0.2rem solid $primaryColor;
+      color: #555;
+      text-transform: lowercase;
+    }
+
+    textarea {
+      resize: none;
+      height: 10rem;
+    }
+
+    input.contact-form-btn {
+      background-color: $primaryColor;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+// end contact section
+
+// footer section
+.footer {
+  @extend .center;
+  flex-direction: column;
+  width: 100%;
+  height: 30vh;
+  background-color: #222;
+
+  .social-media-icons {
+    margin-bottom: 5rem;
+
+    .social-media-link {
+      margin: 0 2rem;
+      padding: 0.7rem;
+      background-color: $primaryColor;
+      border-radius: 0.5rem;
+      display: inline-block;
+
+      i {
+        font-size: 3rem;
+        color: $white;
+      }
+    }
+  }
+
+  .copyright {
+    color: #aaa;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+// end footer section
+
+@import "./media";

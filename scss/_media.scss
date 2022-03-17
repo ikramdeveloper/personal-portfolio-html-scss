@@ -1,0 +1,78 @@
+@media (max-width: 1200px) {
+  .about {
+    .services {
+      height: auto;
+      flex-wrap: wrap;
+
+      .service {
+        margin: 3rem 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header .header-heading {
+    font-size: 4rem;
+  }
+
+  .about .progress-bars-wrapper .progress-bar {
+    width: 50rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header .header-heading {
+    font-size: 3rem;
+  }
+
+  .navbar .navbar-link {
+    margin: 0 2rem;
+    font-size: 1.5rem;
+  }
+
+  .about {
+    padding: 8rem 10rem 0;
+
+    .progress-bars-wrapper .progress-bar {
+      width: 45rem;
+    }
+  }
+
+  .contact {
+    .contact-form {
+      width: 40rem;
+    }
+    .copyright {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 45%;
+  }
+
+  .header .header-heading {
+    font-size: 2.5rem;
+  }
+
+  .navbar .navbar-link {
+    margin: 0 1.5rem;
+  }
+
+  .about-heading {
+    text-align: center;
+  }
+
+  .progress .progress-bars-wrapper .progress-bar {
+    width: 40rem;
+  }
+}
