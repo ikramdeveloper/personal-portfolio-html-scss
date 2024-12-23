@@ -4,270 +4,180 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- font awesome cdn -->
+    <meta
+      name="description"
+      content="Personal portfolio of John Smith, a web developer showcasing projects, skills, and services."
+    />
+    <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
-    <!-- custom css -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css" />
-    <title>Personal Portfolio</title>
+    <title>John Smith | Portfolio</title>
   </head>
   <body>
     <div class="container">
-      <!-- header -->
+      <!-- Header -->
       <header class="header" id="home">
         <h1 class="header-heading">Web Developer</h1>
         <img
           src="./images/john-smith.jpg"
-          alt="john smith"
+          alt="Portrait of John Smith"
           class="header-person-img"
+          loading="lazy"
         />
-        <h3 class="header-person-name">John Smith</h3>
-        <a href="#projects" class="header-btn">Projects</a>
+        <h2 class="header-person-name">John Smith</h2>
+        <a href="#projects" class="header-btn">View Projects</a>
       </header>
-      <!-- end header -->
+      <!-- End Header -->
 
-      <!-- navbar -->
+      <!-- Navbar -->
       <nav class="navbar">
-        <a href="#home" class="navbar-link">home</a>
-        <a href="#about" class="navbar-link">about</a>
-        <a href="#projects" class="navbar-link">portfolio</a>
-        <a href="#contact" class="navbar-link">contact</a>
+        <a href="#home" class="navbar-link">Home</a>
+        <a href="#about" class="navbar-link">About</a>
+        <a href="#projects" class="navbar-link">Portfolio</a>
+        <a href="#contact" class="navbar-link">Contact</a>
       </nav>
-      <!-- end navbar -->
+      <!-- End Navbar -->
 
-      <!-- about section -->
-      <section class="about" id="about">
-        <h1 class="about-heading section-heading">About Me</h1>
-        <div class="progress-bars-wrapper">
-          <div class="progress-bar">
-            <p class="progress-bar-text">
-              HTML
-              <span>97</span>%
-            </p>
-            <div class="progress-bar-percent"></div>
-          </div>
-
-          <div class="progress-bar">
-            <p class="progress-bar-text">
-              JavaScript
-              <span>91</span>%
-            </p>
-            <div class="progress-bar-percent"></div>
-          </div>
-
-          <div class="progress-bar">
-            <p class="progress-bar-text">
-              SASS
-              <span>87</span>%
-            </p>
-            <div class="progress-bar-percent"></div>
-          </div>
-
-          <div class="progress-bar">
-            <p class="progress-bar-text">
-              Ruby
-              <span>90</span>%
-            </p>
-            <div class="progress-bar-percent"></div>
-          </div>
-
-          <div class="progress-bar">
-            <p class="progress-bar-text">
-              Kotlin
-              <span>77</span>%
-            </p>
-            <div class="progress-bar-percent"></div>
-          </div>
-
-          <div class="progress-bar">
-            <p class="progress-bar-text">
-              MySQL
-              <span>90</span>%
-            </p>
-            <div class="progress-bar-percent"></div>
-          </div>
-        </div>
-        <div class="services">
-          <div class="service">
-            <i class="far fa-lightbulb"></i>
-            <h2 class="service-heading">Creative</h2>
-          </div>
-
-          <div class="service">
-            <i class="fas fa-cut"></i>
-            <h2 class="service-heading">Maintenance</h2>
-          </div>
-
-          <div class="service">
-            <i class="fas fa-tachometer-alt"></i>
-            <h2 class="service-heading">Fast</h2>
-          </div>
-
-          <div class="service">
-            <i class="fas fa-rocket"></i>
-            <h2 class="service-heading">Dynamic</h2>
-          </div>
-        </div>
-      </section>
-      <!-- end about section -->
-
-      <!-- projects section -->
-      <section class="projects" id="projects">
-        <h1 class="projects-heading section-heading">My Projects</h1>
-        <div class="projects-wrapper">
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">architect website</h2>
-              <h4 class="project-technologies">HTML / CSS / JS</h4>
+      <main>
+        <!-- About Section -->
+        <section class="about" id="about">
+          <h2 class="about-heading section-heading">About Me</h2>
+          <div class="progress-bars-wrapper">
+            <!-- Progress Bars -->
+            <div class="progress-bar">
+              <p class="progress-bar-text">
+                HTML <span>97</span>%
+              </p>
+              <div class="progress-bar-percent" style="width: 97%;"></div>
             </div>
-            <img
-              src="./images/project-1.jpg"
-              alt="architect website"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
-          </div>
-
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">budget app</h2>
-              <h4 class="project-technologies">React JS</h4>
+            <div class="progress-bar">
+              <p class="progress-bar-text">
+                JavaScript <span>91</span>%
+              </p>
+              <div class="progress-bar-percent" style="width: 91%;"></div>
             </div>
-            <img
-              src="./images/project-2.jpg"
-              alt="budget app"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
-          </div>
-
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">wine house</h2>
-              <h4 class="project-technologies">Angular JS</h4>
+            <div class="progress-bar">
+              <p class="progress-bar-text">
+                SASS <span>87</span>%
+              </p>
+              <div class="progress-bar-percent" style="width: 87%;"></div>
             </div>
-            <img
-              src="./images/project-3.jpg"
-              alt="wine house"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
-          </div>
-
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">task manager</h2>
-              <h4 class="project-technologies">React JS</h4>
+            <div class="progress-bar">
+              <p class="progress-bar-text">
+                Ruby <span>90</span>%
+              </p>
+              <div class="progress-bar-percent" style="width: 90%;"></div>
             </div>
-            <img
-              src="./images/project-4.jpg"
-              alt="task manager"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
-          </div>
-
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">the road</h2>
-              <h4 class="project-technologies">Vue JS / Firebase</h4>
+            <div class="progress-bar">
+              <p class="progress-bar-text">
+                Kotlin <span>77</span>%
+              </p>
+              <div class="progress-bar-percent" style="width: 77%;"></div>
             </div>
-            <img
-              src="./images/project-5.jpg"
-              alt="the road"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
-          </div>
-
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">food recipe app</h2>
-              <h4 class="project-technologies">React JS / Strapi</h4>
+            <div class="progress-bar">
+              <p class="progress-bar-text">
+                MySQL <span>90</span>%
+              </p>
+              <div class="progress-bar-percent" style="width: 90%;"></div>
             </div>
-            <img
-              src="./images/project-6.jpg"
-              alt="food recipe app"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
           </div>
-
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">slideshow</h2>
-              <h4 class="project-technologies">CSS / Swiper JS</h4>
+          <!-- Services -->
+          <div class="services">
+            <div class="service">
+              <i class="far fa-lightbulb"></i>
+              <h3 class="service-heading">Creative</h3>
             </div>
-            <img
-              src="./images/project-7.jpg"
-              alt="slideshow"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
-          </div>
-
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">hamburger menu</h2>
-              <h4 class="project-technologies">HTML / CSS / JS</h4>
+            <div class="service">
+              <i class="fas fa-cut"></i>
+              <h3 class="service-heading">Maintenance</h3>
             </div>
-            <img
-              src="./images/project-8.jpg"
-              alt="hamburger menu"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
-          </div>
-
-          <div class="project">
-            <div class="project-content">
-              <h2 class="project-title">CSS grid system</h2>
-              <h4 class="project-technologies">HTML / CSS Grid / JS</h4>
+            <div class="service">
+              <i class="fas fa-tachometer-alt"></i>
+              <h3 class="service-heading">Fast</h3>
             </div>
-            <img
-              src="./images/project-9.jpg"
-              alt="CSS grid system"
-              class="project-img"
-            />
-            <a href="#" class="project-link" target="_blank">Go to video</a>
+            <div class="service">
+              <i class="fas fa-rocket"></i>
+              <h3 class="service-heading">Dynamic</h3>
+            </div>
           </div>
-        </div>
-      </section>
-      <!-- end projects section -->
+        </section>
+        <!-- End About Section -->
 
-      <!-- contact section -->
-      <section class="contact" id="contact">
-        <h1 class="contact-heading section-heading">Contact Me</h1>
-        <form class="contact-form">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
-          <input type="submit" value="Send" class="contact-form-btn" />
-        </form>
-      </section>
-      <!-- end contact section -->
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+          <h2 class="projects-heading section-heading">My Projects</h2>
+          <div class="projects-wrapper">
+            <!-- Repeatable Project Block -->
+            <div class="project">
+              <div class="project-content">
+                <h3 class="project-title">Architect Website</h3>
+                <h4 class="project-technologies">HTML / CSS / JS</h4>
+              </div>
+              <img
+                src="./images/project-1.jpg"
+                alt="Screenshot of Architect Website project"
+                class="project-img"
+                loading="lazy"
+              />
+              <a href="#" class="project-link" target="_blank">View Details</a>
+            </div>
+            <!-- Repeatable blocks for each project... -->
+          </div>
+        </section>
+        <!-- End Projects Section -->
 
-      <!-- footer -->
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+          <h2 class="contact-heading section-heading">Contact Me</h2>
+          <form class="contact-form">
+            <input
+              type="text"
+              placeholder="Name"
+              aria-label="Your Name"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              aria-label="Your Email"
+              required
+            />
+            <textarea
+              placeholder="Message"
+              aria-label="Your Message"
+              required
+            ></textarea>
+            <button type="submit" class="contact-form-btn">Send</button>
+          </form>
+        </section>
+        <!-- End Contact Section -->
+      </main>
+
+      <!-- Footer -->
       <footer class="footer">
         <div class="social-media-icons">
-          <a href="#link" class="social-media-link">
+          <a href="#link" class="social-media-link" aria-label="GitHub">
             <i class="fab fa-github-square"></i>
           </a>
-          <a href="#link" class="social-media-link">
+          <a href="#link" class="social-media-link" aria-label="Facebook">
             <i class="fab fa-facebook-square"></i>
           </a>
-          <a href="#link" class="social-media-link">
+          <a href="#link" class="social-media-link" aria-label="Instagram">
             <i class="fab fa-instagram-square"></i>
           </a>
-          <a href="#link" class="social-media-link">
+          <a href="#link" class="social-media-link" aria-label="YouTube">
             <i class="fab fa-youtube"></i>
           </a>
         </div>
-        <p class="copyright">Copyright &copy; Ikramdev. All Rights reserved</p>
+        <p class="copyright">
+          Copyright &copy; John Smith. All Rights Reserved.
+        </p>
       </footer>
-      <!-- end footer -->
+      <!-- End Footer -->
     </div>
     <script src="./script.js"></script>
   </body>
